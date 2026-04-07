@@ -1,0 +1,403 @@
+/* ============================================================
+   灯花 · Apple-inspired Minimal Theme
+   GitBook custom styles — website
+   ============================================================ */
+
+:root {
+  --color-bg: #ffffff;
+  --color-sidebar-bg: #f5f5f7;
+  --color-sidebar-border: #d2d2d7;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-link: #0071e3;
+  --color-link-hover: #0077ed;
+  --color-accent: #0071e3;
+  --color-active-bg: #e8f0fe;
+  --color-active-text: #0071e3;
+  --color-code-bg: #f5f5f7;
+  --color-code-border: #e0e0e5;
+  --color-blockquote: #e8f0fe;
+  --color-blockquote-border: #0071e3;
+  --color-hr: #d2d2d7;
+  --color-table-border: #e0e0e5;
+  --color-table-header: #f5f5f7;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --sidebar-width: 260px;
+  --transition: 0.2s ease;
+}
+
+body,
+.book {
+  font-family: var(--font-sans) !important;
+  background: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.book-summary {
+  background: var(--color-sidebar-bg) !important;
+  border-right: 1px solid var(--color-sidebar-border) !important;
+  width: var(--sidebar-width) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.book-summary ul.summary {
+  padding: 24px 0 !important;
+}
+
+.book-summary ul.summary li.header {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--color-text-secondary) !important;
+  padding: 12px 20px 6px !important;
+}
+
+.book-summary ul.summary li a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--color-text) !important;
+  padding: 7px 20px !important;
+  border-radius: 0 !important;
+  transition: background var(--transition), color var(--transition) !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.book-summary ul.summary li a:hover {
+  background: rgba(0, 113, 227, 0.08) !important;
+  color: var(--color-link-hover) !important;
+}
+
+.book-summary ul.summary li.active > a {
+  background: var(--color-active-bg) !important;
+  color: var(--color-active-text) !important;
+  font-weight: 500 !important;
+  border-right: 2px solid var(--color-accent) !important;
+}
+
+.book-summary ul.summary li ul.articles {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.book-summary ul.summary li ul.articles li a {
+  padding-left: 36px !important;
+  font-size: 13px !important;
+  color: var(--color-text-secondary) !important;
+}
+
+.book-summary ul.summary li ul.articles li a:hover {
+  color: var(--color-link-hover) !important;
+}
+
+.book-summary ul.summary li ul.articles li.active > a {
+  color: var(--color-active-text) !important;
+  font-weight: 500 !important;
+}
+
+#book-search-input {
+  padding: 16px 16px 8px !important;
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+#book-search-input input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: rgba(255,255,255,0.8) !important;
+  border: 1px solid var(--color-sidebar-border) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  font-family: var(--font-sans) !important;
+  color: var(--color-text) !important;
+  outline: none !important;
+  transition: border-color var(--transition), box-shadow var(--transition) !important;
+}
+
+#book-search-input input:focus {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15) !important;
+}
+
+#book-search-input input::placeholder {
+  color: var(--color-text-secondary) !important;
+}
+
+.book-summary ul.summary li.divider {
+  border-top: 1px solid var(--color-sidebar-border) !important;
+  margin: 8px 16px !important;
+  height: 0 !important;
+}
+
+.book-summary ul.summary li .gitbook-link {
+  font-size: 12px !important;
+  color: var(--color-text-secondary) !important;
+  padding: 8px 20px !important;
+}
+
+.book-body {
+  background: var(--color-bg) !important;
+  left: var(--sidebar-width) !important;
+}
+
+.page-wrapper {
+  background: var(--color-bg) !important;
+}
+
+.page-inner {
+  max-width: 780px !important;
+  padding: 48px 56px 80px !important;
+  margin: 0 auto !important;
+}
+
+.book-header {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid var(--color-sidebar-border) !important;
+  height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.book-header h1 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--color-text) !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 !important;
+  padding: 0 16px !important;
+}
+
+.book-header h1 a {
+  color: var(--color-text) !important;
+  text-decoration: none !important;
+}
+
+.book-header a.btn {
+  color: var(--color-text-secondary) !important;
+  font-size: 18px !important;
+  line-height: 52px !important;
+  padding: 0 16px !important;
+  transition: color var(--transition) !important;
+}
+
+.book-header a.btn:hover {
+  color: var(--color-text) !important;
+  background: transparent !important;
+}
+
+.markdown-section {
+  font-family: var(--font-sans) !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: var(--color-text) !important;
+}
+
+.markdown-section h1 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--color-text) !important;
+  margin: 0 0 24px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid var(--color-hr) !important;
+  line-height: 1.2 !important;
+}
+
+.markdown-section h2 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--color-text) !important;
+  margin: 48px 0 16px !important;
+  padding-top: 8px !important;
+  line-height: 1.25 !important;
+}
+
+.markdown-section h3 {
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--color-text) !important;
+  margin: 32px 0 12px !important;
+  line-height: 1.3 !important;
+}
+
+.markdown-section h4 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--color-text) !important;
+  margin: 24px 0 8px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.markdown-section h5,
+.markdown-section h6 {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--color-text-secondary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin: 20px 0 8px !important;
+}
+
+.markdown-section p {
+  margin: 0 0 18px !important;
+  line-height: 1.75 !important;
+}
+
+.markdown-section a {
+  color: var(--color-link) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color var(--transition), color var(--transition) !important;
+}
+
+.markdown-section a:hover {
+  color: var(--color-link-hover) !important;
+  border-bottom-color: var(--color-link-hover) !important;
+}
+
+.markdown-section ul,
+.markdown-section ol {
+  padding-left: 24px !important;
+  margin: 0 0 18px !important;
+}
+
+.markdown-section li {
+  margin: 6px 0 !important;
+  line-height: 1.7 !important;
+}
+
+.markdown-section code {
+  font-family: var(--font-mono) !important;
+  font-size: 13.5px !important;
+  background: var(--color-code-bg) !important;
+  border: 1px solid var(--color-code-border) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 2px 6px !important;
+  color: #c7254e !important;
+}
+
+.markdown-section pre {
+  background: #1c1c1e !important;
+  border: none !important;
+  border-radius: var(--radius) !important;
+  padding: 24px !important;
+  overflow-x: auto !important;
+  margin: 0 0 24px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+}
+
+.markdown-section pre code {
+  font-family: var(--font-mono) !important;
+  font-size: 13.5px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #e0e0e0 !important;
+  line-height: 1.65 !important;
+}
+
+.markdown-section blockquote {
+  background: var(--color-blockquote) !important;
+  border-left: 3px solid var(--color-blockquote-border) !important;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+  padding: 14px 20px !important;
+  margin: 0 0 24px !important;
+  color: var(--color-text-secondary) !important;
+  font-style: italic !important;
+}
+
+.markdown-section blockquote p {
+  margin: 0 !important;
+  line-height: 1.65 !important;
+}
+
+.markdown-section hr {
+  border: none !important;
+  border-top: 1px solid var(--color-hr) !important;
+  margin: 40px 0 !important;
+}
+
+.markdown-section table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 0 0 24px !important;
+  font-size: 14px !important;
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 0 1px var(--color-table-border) !important;
+}
+
+.markdown-section table thead tr {
+  background: var(--color-table-header) !important;
+}
+
+.markdown-section table th {
+  padding: 12px 16px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  text-align: left !important;
+  letter-spacing: 0.02em !important;
+  border-bottom: 1px solid var(--color-table-border) !important;
+  color: var(--color-text-secondary) !important;
+  text-transform: uppercase !important;
+}
+
+.markdown-section table td {
+  padding: 11px 16px !important;
+  border-bottom: 1px solid var(--color-table-border) !important;
+}
+
+.markdown-section table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.markdown-section table tr:hover td {
+  background: #f9f9fb !important;
+}
+
+.markdown-section img {
+  max-width: 100% !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+  margin: 8px 0 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sidebar-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b5;
+}
+
+::selection {
+  background: rgba(0, 113, 227, 0.18) !important;
+  color: var(--color-text) !important;
+}
+
+@media (max-width: 768px) {
+  .page-inner {
+    padding: 32px 24px 60px !important;
+  }
+}
